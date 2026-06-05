@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Singhal — AI Automation &amp; Prompt Engineer</title>
+  <meta name="description" content="Harshit Singhal — AI Automation & Prompt Engineer. I turn manual, time-consuming processes into deterministic AI workflows you can trust in production. n8n, LLM integration, prompt engineering." />
+  <meta name="author" content="Harshit Singhal" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harshit Singhal — AI Automation & Prompt Engineer" />
+  <meta property="og:description" content="I turn manual processes into deterministic AI workflows you can trust in production." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Familjen+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23090a0c'/><text x='50' y='68' font-size='58' font-family='monospace' font-weight='700' fill='%23c9f24d' text-anchor='middle'>H</text></svg>" />
+</head>
+<body>
+
+  <!-- grain + cursor -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand">
+      <span class="nav__mark">H</span>
+      <span class="nav__name">Harshit&nbsp;Singhal</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#workflow">Workflow</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#testimonial">Voices</a>
+    </nav>
+    <a href="#contact" class="nav__cta" data-magnetic>
+      <span>Let's talk</span>
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__status reveal">
+        <span class="dot"></span>
+        <span class="hero__status-txt">Open to Prompt Engineer / AI Automation roles</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line reveal" style="--d:.05s">I build AI that</span>
+        <span class="line reveal" style="--d:.12s">
+          <span class="rotator" id="rotator" aria-live="polite">
+            <span class="rotator__word">automates</span>
+          </span>
+        </span>
+        <span class="line reveal" style="--d:.19s">the boring work.</span>
+      </h1>
+
+      <p class="hero__lede reveal" style="--d:.28s">
+        I'm <strong>Harshit Singhal</strong> — an AI Automation &amp; Prompt Engineer. I turn manual,
+        time-consuming processes into <em>deterministic</em> AI workflows that don't hallucinate,
+        don't hedge, and run flawlessly in production.
+      </p>
+
+      <div class="hero__actions reveal" style="--d:.36s">
+        <a href="#workflow" class="btn btn--primary" data-magnetic>
+          <span>See how I think</span>
+          <svg viewBox="0 0 16 16" width="15" height="15" fill="none"><path d="M8 2v12M8 14l5-5M8 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost" data-magnetic>Get in touch</a>
+      </div>
+
+      <div class="hero__meta reveal" style="--d:.44s">
+        <span class="hero__meta-item"><span class="k">role</span> AI Engineer @ LeadUpAI</span>
+        <span class="hero__meta-item"><span class="k">loc</span> Dehradun, IN — remote / EST overlap</span>
+        <span class="hero__meta-item"><span class="k">edu</span> MCA, Graphic Era University</span>
+      </div>
+    </div>
+
+    <a href="#workflow" class="hero__scroll" aria-label="Scroll down">
+      <span>scroll</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Prompt Engineering</span><i>✦</i><span>n8n Automation</span><i>✦</i><span>LLM Integration</span><i>✦</i>
+      <span>Chain-of-Thought</span><i>✦</i><span>Guardrails</span><i>✦</i><span>Vision LLMs</span><i>✦</i>
+      <span>Lead Generation</span><i>✦</i><span>WhatsApp AI</span><i>✦</i>
+      <span>Prompt Engineering</span><i>✦</i><span>n8n Automation</span><i>✦</i><span>LLM Integration</span><i>✦</i>
+      <span>Chain-of-Thought</span><i>✦</i><span>Guardrails</span><i>✦</i><span>Vision LLMs</span><i>✦</i>
+      <span>Lead Generation</span><i>✦</i><span>WhatsApp AI</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ABOUT / STATS -->
+  <section class="about" id="about">
+    <div class="about__lead reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>01 — Profile</span>
+      <p class="about__big">
+        I'm the bridge between <span class="hl">human workflows</span> and
+        <span class="hl">AI automation</span>. I map how people actually work, then engineer
+        prompt chains and n8n pipelines that replace the repetitive parts — with strict
+        guardrails so the output is decisive, not vague.
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal-up" style="--d:.0s">
+        <div class="stat__num" data-count="3" data-suffix="+">0</div>
+        <div class="stat__label">Production AI systems shipped</div>
+      </div>
+      <div class="stat reveal-up" style="--d:.08s">
+        <div class="stat__num" data-count="95" data-suffix="%">0</div>
+        <div class="stat__label">Scrape accuracy at 200+ items</div>
+      </div>
+      <div class="stat reveal-up" style="--d:.16s">
+        <div class="stat__num" data-count="3" data-suffix="s">0</div>
+        <div class="stat__label">LLM round-trip in the LinkedIn tool</div>
+      </div>
+      <div class="stat reveal-up" style="--d:.24s">
+        <div class="stat__num" data-count="0" data-suffix="">0</div>
+        <div class="stat__label">Hallucinations tolerated in prod</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW (signature) -->
+  <section class="workflow" id="workflow">
+    <div class="section-head reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>02 — How I work</span>
+      <h2 class="section-title">From a manual task to a workflow you can trust.</h2>
+      <p class="section-sub">
+        This is the actual shape of what I build — live data flowing through a prompt engine
+        with guardrails, into models, into reliable outputs. Watch the signal move.
+      </p>
+    </div>
+
+    <div class="flow" id="flow">
+      <svg class="flow__wires" id="flowWires" aria-hidden="true" preserveAspectRatio="none"></svg>
+
+      <div class="flow__stage" data-stage="Input">
+        <div class="flow__stage-label">Input · manual today</div>
+        <div class="node" data-node="in-1" data-color="blue">
+          <div class="node__top"><span class="node__ico">💬</span><span class="node__tag">trigger</span></div>
+          <div class="node__title">WhatsApp Business API</div>
+          <div class="node__desc">Customer messages &amp; images in</div>
+          <span class="node__port node__port--out"></span>
+        </div>
+        <div class="node" data-node="in-2" data-color="blue">
+          <div class="node__top"><span class="node__ico">🎯</span><span class="node__tag">source</span></div>
+          <div class="node__title">Apollo · Apify</div>
+          <div class="node__desc">Raw prospect &amp; web data</div>
+          <span class="node__port node__port--out"></span>
+        </div>
+        <div class="node" data-node="in-3" data-color="blue">
+          <div class="node__top"><span class="node__ico">📸</span><span class="node__tag">vision</span></div>
+          <div class="node__title">Image / Prescription</div>
+          <div class="node__desc">Multimodal upload</div>
+          <span class="node__port node__port--out"></span>
+        </div>
+      </div>
+
+      <div class="flow__stage flow__stage--center" data-stage="Engine">
+        <div class="flow__stage-label">Prompt engine</div>
+        <div class="node node--hero" data-node="engine" data-color="lime">
+          <div class="node__top"><span class="node__ico">⚙︎</span><span class="node__tag">core</span></div>
+          <div class="node__title">Chain-of-Thought + Guardrails</div>
+          <div class="node__desc">Few-shot · ReAct · context injection · strict constraints</div>
+          <div class="node__chips">
+            <span>zero hallucination</span><span>decisive</span><span>deterministic</span>
+          </div>
+          <span class="node__port node__port--in"></span>
+          <span class="node__port node__port--out"></span>
+        </div>
+      </div>
+
+      <div class="flow__stage flow__stage--center" data-stage="Model">
+        <div class="flow__stage-label">Reasoning</div>
+        <div class="node" data-node="llm" data-color="lime">
+          <div class="node__top"><span class="node__ico">🧠</span><span class="node__tag">LLM</span></div>
+          <div class="node__title">OpenRouter</div>
+          <div class="node__desc">Claude &amp; GPT, routed per task</div>
+          <span class="node__port node__port--in"></span>
+          <span class="node__port node__port--out"></span>
+        </div>
+      </div>
+
+      <div class="flow__stage" data-stage="Output">
+        <div class="flow__stage-label">Output · automated</div>
+        <div class="node" data-node="out-1" data-color="green">
+          <div class="node__top"><span class="node__ico">🗄️</span><span class="node__tag">data</span></div>
+          <div class="node__title">Supabase</div>
+          <div class="node__desc">Live inventory &amp; state</div>
+          <span class="node__port node__port--in"></span>
+        </div>
+        <div class="node" data-node="out-2" data-color="green">
+          <div class="node__top"><span class="node__ico">▲</span><span class="node__tag">deploy</span></div>
+          <div class="node__title">Vercel app</div>
+          <div class="node__desc">Shipped web surface</div>
+          <span class="node__port node__port--in"></span>
+        </div>
+        <div class="node" data-node="out-3" data-color="green">
+          <div class="node__top"><span class="node__ico">✅</span><span class="node__tag">result</span></div>
+          <div class="node__title">Qualified output</div>
+          <div class="node__desc">Validated leads · safe replies</div>
+          <span class="node__port node__port--in"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="flow__note reveal-up">Built in <strong>n8n</strong>, iterated with <strong>Claude Code</strong>. The same backbone behind every project below.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="work" id="work">
+    <div class="section-head reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>03 — Experience</span>
+      <h2 class="section-title">Where I've been building.</h2>
+    </div>
+
+    <div class="exp reveal-up">
+      <div class="exp__time">
+        <span class="exp__years">Jan 2026 — May 2026</span>
+        <span class="exp__where">Remote</span>
+      </div>
+      <div class="exp__body">
+        <div class="exp__role">
+          <h3>AI Engineer</h3>
+          <span class="exp__co">LeadUpAI</span>
+        </div>
+        <ul class="exp__list">
+          <li>Built &amp; deployed end-to-end AI automation workflows in <strong>n8n</strong>, wiring LLMs via <strong>OpenRouter</strong> (Claude, GPT) into the <strong>WhatsApp Business API</strong> to turn slow manual processes into reliable conversational agents.</li>
+          <li>Engineered <strong>lead-generation &amp; validation</strong> pipelines with <strong>Apify</strong> and <strong>Apollo</strong> to scrape, enrich and qualify prospects — with supporting web apps deployed on <strong>Vercel</strong>.</li>
+          <li>Designed deterministic prompt chains (<strong>Chain-of-Thought</strong>, few-shot, hard guardrails, context injection) that eliminated hallucination and forced decisive, trustworthy output in production.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp reveal-up">
+      <div class="exp__time">
+        <span class="exp__years">2024 — 2026</span>
+        <span class="exp__where">Dehradun, IN</span>
+      </div>
+      <div class="exp__body">
+        <div class="exp__role">
+          <h3>Masters in Computer Application</h3>
+          <span class="exp__co">Graphic Era Deemed University</span>
+        </div>
+        <ul class="exp__list">
+          <li>Deepened systems-thinking: breaking human tasks into logical, step-by-step flows an AI can execute end to end.</li>
+          <li>Prior: BCA, St. R.C Convent College (2021—2024).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-head reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>04 — Selected work</span>
+      <h2 class="section-title">Things I shipped end-to-end.</h2>
+    </div>
+
+    <div class="proj-grid">
+      <article class="proj proj--wide reveal-up" data-tilt>
+        <div class="proj__index">/01</div>
+        <div class="proj__head">
+          <h3 class="proj__title">Medical Agent — WhatsApp AI Chatbot</h3>
+          <span class="proj__year">2026</span>
+        </div>
+        <p class="proj__desc">
+          A WhatsApp chatbot that lets pharmacy users find in-stock medicines in natural language —
+          querying a <strong>Supabase</strong> inventory in real time. When something's out of stock it
+          recommends <em>clinically valid</em> alternatives via guardrailed prompt reasoning, and accepts
+          medicine/prescription <strong>images</strong> parsed by a vision LLM. Orchestrated in n8n.
+        </p>
+        <div class="proj__stack">
+          <span>n8n</span><span>OpenRouter · Claude</span><span>Supabase</span><span>WhatsApp API</span><span>Vision LLM</span>
+        </div>
+        <div class="proj__glow" aria-hidden="true"></div>
+      </article>
+
+      <article class="proj reveal-up" data-tilt>
+        <div class="proj__index">/02</div>
+        <div class="proj__head">
+          <h3 class="proj__title">LinkedIn Comment Suggester</h3>
+          <span class="proj__year">Nov 2025</span>
+        </div>
+        <p class="proj__desc">
+          Android tool that generates LinkedIn comment suggestions in <strong>2—3s</strong> by reading a
+          post screenshot through the <strong>OpenAI Vision API</strong>, with a persistent floating-overlay
+          capture system (Foreground Service · WindowManager · MediaProjection).
+        </p>
+        <div class="proj__stack">
+          <span>Kotlin</span><span>OpenAI Vision</span><span>MVVM</span><span>Retrofit · Coroutines</span>
+        </div>
+        <a class="proj__link" href="https://github.com/HarshitSinghall" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="proj__glow" aria-hidden="true"></div>
+      </article>
+
+      <article class="proj reveal-up" data-tilt>
+        <div class="proj__index">/03</div>
+        <div class="proj__head">
+          <h3 class="proj__title">Amazon Product Scraper</h3>
+          <span class="proj__year">Dec 2025</span>
+        </div>
+        <p class="proj__desc">
+          Python scraper pulling 5 fields from <strong>200+</strong> Amazon products at <strong>95%+</strong>
+          accuracy (Selenium + BeautifulSoup over dynamic pages), wrapped in a Streamlit app with live progress
+          and one-click Excel/CSV/JSON export.
+        </p>
+        <div class="proj__stack">
+          <span>Python</span><span>Selenium</span><span>BeautifulSoup4</span><span>Streamlit</span><span>Pandas</span>
+        </div>
+        <a class="proj__link" href="https://github.com/HarshitSinghall" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="proj__glow" aria-hidden="true"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack" id="stack">
+    <div class="section-head reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>05 — Toolkit</span>
+      <h2 class="section-title">The stack behind the automation.</h2>
+    </div>
+
+    <div class="stack__grid">
+      <div class="stack__col reveal-up">
+        <h4 class="stack__cat"><span>AI &amp; Automation</span></h4>
+        <ul class="stack__list">
+          <li>Prompt Engineering — Zero/Few-shot, CoT, ReAct</li>
+          <li>n8n workflow automation</li>
+          <li>LLM integration — OpenAI, Anthropic, OpenRouter</li>
+          <li>Guardrails &amp; context injection</li>
+          <li>Vision LLMs · Lead gen &amp; validation</li>
+        </ul>
+      </div>
+      <div class="stack__col reveal-up" style="--d:.06s">
+        <h4 class="stack__cat"><span>Languages</span></h4>
+        <ul class="stack__list">
+          <li>Python</li><li>JavaScript</li><li>Kotlin</li>
+          <li>Java · SQL</li><li>C · HTML/CSS</li>
+        </ul>
+      </div>
+      <div class="stack__col reveal-up" style="--d:.12s">
+        <h4 class="stack__cat"><span>Frameworks</span></h4>
+        <ul class="stack__list">
+          <li>Selenium · BeautifulSoup</li>
+          <li>Streamlit</li>
+          <li>Jetpack Compose · Retrofit</li>
+          <li>Pandas · Coroutines</li>
+        </ul>
+      </div>
+      <div class="stack__col reveal-up" style="--d:.18s">
+        <h4 class="stack__cat"><span>Platforms &amp; Data</span></h4>
+        <ul class="stack__list">
+          <li>Claude Code · Supabase · Vercel</li>
+          <li>Apify · Apollo · GCP</li>
+          <li>WhatsApp Business API</li>
+          <li>REST · Vision API · Razorpay SDK</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL VIDEO PLACEHOLDER -->
+  <section class="testimonial" id="testimonial">
+    <div class="section-head reveal-up">
+      <span class="eyebrow"><span class="eyebrow__bar"></span>06 — In their words</span>
+      <h2 class="section-title">What the LeadUpAI founders have to say.</h2>
+    </div>
+
+    <figure class="vid reveal-up">
+      <!--
+        ▸▸▸ DROP YOUR TESTIMONIAL VIDEO HERE ◂◂◂
+        Replace the .vid__placeholder div below with EITHER:
+
+        1) A local/hosted file:
+           <video class="vid__media" controls poster="thumb.jpg" preload="metadata">
+             <source src="leadupai-testimonial.mp4" type="video/mp4" />
+           </video>
+
+        2) A YouTube / Loom / Vimeo embed:
+           <iframe class="vid__media" src="https://www.youtube.com/embed/VIDEO_ID"
+             title="LeadUpAI founders testimonial" frameborder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             allowfullscreen></iframe>
+      -->
+      <div class="vid__placeholder" id="vidPlaceholder" role="button" tabindex="0" aria-label="Testimonial video placeholder">
+        <div class="vid__grid" aria-hidden="true"></div>
+        <div class="vid__play">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
+        </div>
+        <div class="vid__caption">
+          <span class="vid__badge">●&nbsp;reserved slot</span>
+          <p>Testimonial video — LeadUpAI founders</p>
+          <span class="vid__hint">Drop the video file or embed here (see code comment).</span>
+        </div>
+        <div class="vid__corner vid__corner--tl"></div>
+        <div class="vid__corner vid__corner--tr"></div>
+        <div class="vid__corner vid__corner--bl"></div>
+        <div class="vid__corner vid__corner--br"></div>
+      </div>
+      <figcaption class="vid__cap">
+        <span>Founders, LeadUpAI</span>
+        <span class="vid__cap-dim">on working with Harshit</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <span class="eyebrow reveal-up"><span class="eyebrow__bar"></span>07 — Let's build</span>
+      <h2 class="contact__title reveal-up">
+        Have a manual process<br />that should run itself?
+      </h2>
+      <p class="contact__sub reveal-up">
+        I'm available for AI automation &amp; prompt-engineering work — strong EST overlap, remote-ready.
+        Tell me what's eating your team's time.
+      </p>
+
+      <a class="contact__mail reveal-up" href="mailto:harshitsinghal822@gmail.com" data-magnetic>
+        harshitsinghal822@gmail.com
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none"><path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="contact__links reveal-up">
+        <a href="https://linkedin.com/in/harshit-singhal1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/HarshitSinghall" target="_blank" rel="noopener">GitHub</a>
+        <a href="tel:+917017531825">+91 70175 31825</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Harshit Singhal</span>
+      <span class="footer__mid">Designed &amp; built as an automation canvas</span>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </footer>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
